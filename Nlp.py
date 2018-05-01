@@ -22,10 +22,10 @@ class Textprocessing:
             words=(nltk.pos_tag(wt))
             for j in range(0,len(words)):
                 if(words[j][1]=='CD'):
-                    temp=words[j][0]
-		            k=1
-		            while((j+k)<len1 and words[j+k][0][0]>='0' and words[j+k][0][0]<='9'):
-			            temp=temp+words[j+k][0]
+		    temp=words[j][0]
+		    k=1
+		    while((j+k)<len1 and words[j+k][0][0]>='0' and words[j+k][0][0]<='9'):
+			temp=temp+words[j+k][0]
                         k+=1
                     cardinal.append(temp)
                 elif(re.match("^[a-zA-Z0-9]+(?:_[a-zA-Z0-9]+)?$", words[j][0])):
